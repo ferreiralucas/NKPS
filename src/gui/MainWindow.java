@@ -6,6 +6,8 @@
 
 package gui;
 
+import domain.Employee;
+import domain.Manager;
 import java.awt.Dimension;
 import java.awt.DisplayMode;
 import java.awt.Insets;
@@ -84,9 +86,10 @@ public class MainWindow extends javax.swing.JFrame {
      */
     private boolean setHomePanel(String username, char[] password){
         // if username and password are correct
+        Employee emp = new Manager(0, username, "Charles");
         remove(lp);
         if (hp == null){
-            hp = new HomePanel();
+            hp = new HomePanel(emp);
         }
         
         add(hp);

@@ -8,4 +8,9 @@ public class Clerk extends Employee {
 
 	private Departament departament;
 
+        
+        public Clerk(int id, String username, String name){
+            super(id, username, name);
+        }
+        
 }

@@ -1,14 +1,28 @@
 package domain;
+
+
 public class Employee {
 
-	private int id;
+    private int id;
+    private String username;
+    private String name;
 
-	private char username;
+    public Employee(int id, String username, String name) {
+        this.id = id;
+        this.username = username;
+        this.name = name;
+    }
 
-	private char password;
+    public int getId() {
+        return id;
+    }
 
-	private char name;
+    public String getUsername() {
+        return username;
+    }
 
-	private int age;
+    public String getName() {
+        return name;
+    }
 
 }

@@ -43,12 +43,15 @@ public class OverviewPanel extends javax.swing.JPanel {
     
     public void setGraph(LineChart chart){
         this.overviewChart = chart;
-        this.overviewChart.setSize(this.overviewChartPanel.getWidth(), this.overviewChartPanel.getHeight());
+        if (this.overviewChartPanel.getWidth() * this.overviewChartPanel.getHeight() < 300000)
+            this.overviewChart.setSize(this.overviewChartPanel.getWidth(), this.overviewChartPanel.getHeight());
+        else 
+            this.overviewChart.setSize(600, 300);
+            
         String url = chart.toURLString();
         try {
             overviewChartPanel.setIcon(new ImageIcon(ImageIO.read(new URL(url))));
-        }catch (IOException e) {
-        } 
+        }catch (IOException e) {} 
     }
     
     /**
@@ -68,13 +71,13 @@ public class OverviewPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(overviewChartPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 409, Short.MAX_VALUE)
-                .addGap(215, 215, 215))
+            .addComponent(overviewChartPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 624, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(overviewChartPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 304, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(overviewChartPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 106, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
