@@ -88,6 +88,7 @@ public class ReviewPanel extends javax.swing.JPanel {
         JPanel panel4 = new JPanel();
         
         jTabbedPane1.addTab("panel1",panel1());
+        
         jTabbedPane1.addTab("panel2",panel2);
         jTabbedPane1.addTab("panel3",panel3);
         jTabbedPane1.addTab("panel4",panel4);
@@ -100,12 +101,28 @@ public class ReviewPanel extends javax.swing.JPanel {
         JTable tb = new JTable();
         JScrollPane tableContainer = new JScrollPane(tb);
         
+        tb.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        tb.setEnabled(false);
+        tb.setAutoResizeMode(300);
+        //tb.setLocation(13, 1);
+        tableContainer.setViewportView(tb);
+        
         panel1.add(tableContainer,BorderLayout.CENTER);
         //frame.getCo
         
         
-        tb.setSize(3, 3);
-        panel1.add(tb);
+        //tb.setSize(3, 3);
+        //panel1.add(tb);
         return panel1; 
     }
     
