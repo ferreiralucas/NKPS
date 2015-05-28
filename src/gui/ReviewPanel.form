@@ -30,7 +30,7 @@
                   </Group>
                   <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="275" max="32767" attributes="0"/>
+              <EmptySpace pref="276" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
@@ -41,6 +41,7 @@
               </Group>
               <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
           </Group>
+          <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -60,7 +61,8 @@
                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="319" max="32767" attributes="0"/>
+              <EmptySpace pref="219" max="32767" attributes="0"/>
+              <Component id="jTabbedPane1" min="-2" pref="100" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -109,5 +111,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
     </Component>
+    <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+    </Container>
   </SubComponents>
 </Form>
