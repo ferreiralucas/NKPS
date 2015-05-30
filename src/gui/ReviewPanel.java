@@ -49,9 +49,9 @@ public class ReviewPanel extends javax.swing.JPanel {
     }
     
     public void createChart() throws MalformedURLException, IOException{
-        ChartsFactory cf = new ChartsFactory();
-        GChart chart1 = cf.LineChart();
-        GChart chart2 = cf.PieChart();
+      
+        GChart chart1 = ChartsFactory.LineChart();
+        GChart chart2 = ChartsFactory.PieChart();
         //cf.displayUrlString(chart1.toURLString());
         //jPanel1.add(chart1);
         //jLabel7 = new JLabel(new ImageIcon(ImageIO.read(new URL(chart1.toURLString()))));
@@ -80,20 +80,8 @@ public class ReviewPanel extends javax.swing.JPanel {
 	}
 
     private void initTabPanel(){
-        
-        
-        
-        JPanel panel2 = new JPanel();
-        JPanel panel3 = new JPanel();
-        JPanel panel4 = new JPanel();
-        
-        jTabbedPane1.addTab("panel1",panel1());
-        
-        jTabbedPane1.addTab("panel2",panel2);
-        jTabbedPane1.addTab("panel3",panel3);
-        jTabbedPane1.addTab("panel4",panel4);
-        //jTabbedPane1.
-        
+    
+  
     }
     
     public JPanel panel1(){
@@ -143,7 +131,6 @@ public class ReviewPanel extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
 
         jLabel1.setText("Revenue");
 
@@ -176,7 +163,7 @@ public class ReviewPanel extends javax.swing.JPanel {
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel4))
-                    .addComponent(jLabel7))
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 276, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -185,7 +172,6 @@ public class ReviewPanel extends javax.swing.JPanel {
                         .addComponent(jLabel6))
                     .addComponent(jLabel8))
                 .addGap(41, 41, 41))
-            .addComponent(jTabbedPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -200,10 +186,9 @@ public class ReviewPanel extends javax.swing.JPanel {
                     .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 219, Short.MAX_VALUE)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(216, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -217,6 +202,5 @@ public class ReviewPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
 }
