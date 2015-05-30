@@ -3,20 +3,21 @@ import domain.Mail;
 
 public class MailPersistence {
 
-	public void newMail() {
+	   
+    public void newMail() {
 
-	}
+    }
 
-	public Mail getMail() {
-		return null;
-	}
+    public Mail getMail() {
+            return null;
+    }
 
-	public void delMail() {
+    public void delMail() {
 
-	}
+    }
 
-	public void updateMail() {
+    public void updateMail() {
 
-	}
+    }
 
 }
