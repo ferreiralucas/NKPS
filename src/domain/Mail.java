@@ -1,5 +1,7 @@
 package domain;
 
+import java.util.Date;
+
 public class Mail {
 
     private String id;
@@ -12,8 +14,18 @@ public class Mail {
 
     private Route route;
 
+    private String origin;
+    
+    private String destination;
+    
     private double price;
-
+    
+    private int eventNumber;
+    
+    private Date eventTime;
+    
+    private String priority;
+    
     public String getId() {
         return id;
     }
@@ -60,6 +72,47 @@ public class Mail {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public String getOrigin() {
+        //this.orign = getRoute.origin.toString();
+        return origin;
+    }
+
+    public void setOrigin(String origin) {
+        this.origin = origin;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public void setDestination(String destination) {
+        this.destination = destination;
+    }
+
+    public int getEventNumber() {
+        return eventNumber;
+    }
+
+    public void setEventNumber(int eventNumber) {
+        this.eventNumber = eventNumber;
+    }
+
+    public Date getEventTime() {
+        return eventTime;
+    }
+
+    public void setEventTime(Date eventTime) {
+        this.eventTime = eventTime;
+    }
+
+    public String getPriority() {
+        return priority;
+    }
+
+    public void setPriority(String priority) {
+        this.priority = priority;
     }
 
 }
